@@ -14,6 +14,7 @@ using System.Runtime.Remoting.Channels.Tcp;
 using System.Runtime.Serialization.Formatters;
 using AutoChem.Core.AppInterop;
 using NLog;
+using uPLibrary.Networking.M2Mqtt;
 
 namespace AutoChemBroker
 {
@@ -26,7 +27,6 @@ namespace AutoChemBroker
         private IApplicationConnection _app;
         private AutoChemClient _client;
         private ILiveExperimentConnection _liveExperiment;
-        private HttpClient _influxdbClient;
 
         public AutoChemBrokerEntryPoint(NameValueCollection config)
         {
